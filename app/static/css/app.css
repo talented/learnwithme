@@ -6,12 +6,15 @@ body {
   padding-top: 80px;
 }
 
-#category a {
+#category {
   padding: 5px 15px;
+  height: 30px;
+  max-resolution: 20px;
 }
 
 #mainpage {
   background-color: #f7f7f7;
+  padding-top: 20px;
 }
 
 #footer {

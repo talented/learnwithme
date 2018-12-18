@@ -16,5 +16,5 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "learnwithme.settings")
 application = get_wsgi_application()
 
 # Use whitenouse to serve static files on HEROKU
-from whitenouse.django import DjangoWhiteNoise
-application = DjangoWhiteNoise(application)
+# from whitenoise.django import DjangoWhiteNoise
+# application = DjangoWhiteNoise(application)
