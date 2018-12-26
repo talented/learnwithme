@@ -153,7 +153,9 @@ SOCIAL_AUTH_FACEBOOK_SECRET = 'a0ae6ffd781f7d194bc3a84901212f42'
 
 # Replace database settings to use postgresql on HEROKU
 import dj_database_url
-db_from_env = dj_database_url.config()
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'] = dj_database_url.config(default='postgres://...')
+db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASES['default'].update(db_from_env)
 
 SOCIAL_AUTH_PIPELINE = (
@@ -169,4 +171,4 @@ SOCIAL_AUTH_PIPELINE = (
 )
 
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
-SECURE_SSL_REDIRECT = False
+# SECURE_SSL_REDIRECT = False
