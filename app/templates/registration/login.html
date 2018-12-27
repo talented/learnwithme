@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 
-
+<meta name="google-signin-client_id" content="859046977191-scn9qshqphlg0gnu5tobq6uing1bjoe4.apps.googleusercontent.com">
 {% block page %}
 <h2>Login</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login</button>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
 </form>
 <br>
 <p><strong>-- OR --</strong></p>
