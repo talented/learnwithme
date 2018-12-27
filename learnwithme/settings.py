@@ -142,7 +142,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 LOGIN_URL = '/login'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '//'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '859046977191-avav307psof3ht1l9em9sqhh4gis6k6c.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'iFtgjw7xB88To7dPJP5ukfd3'
@@ -164,7 +164,7 @@ import dj_database_url
 #         'PORT': '',
 #     }
 # }
-db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
 SOCIAL_AUTH_PIPELINE = (
@@ -179,5 +179,5 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.user.user_details',
 )
 
-SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
+# SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 # SECURE_SSL_REDIRECT = False
