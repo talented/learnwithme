@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -145,11 +144,8 @@ AUTHENTICATION_BACKENDS = (
 LOGIN_URL = '/login'
 LOGIN_REDIRECT_URL = '/'
 
-# SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '859046977191-avav307psof3ht1l9em9sqhh4gis6k6c.apps.googleusercontent.com'
-# SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'iFtgjw7xB88To7dPJP5ukfd3'
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '859046977191-scn9qshqphlg0gnu5tobq6uing1bjoe4.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'KxD_b8bTDXuvRqPsltB8lC_w'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '859046977191-avav307psof3ht1l9em9sqhh4gis6k6c.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'iFtgjw7xB88To7dPJP5ukfd3'
 
 SOCIAL_AUTH_FACEBOOK_KEY = '290517424924170'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'a0ae6ffd781f7d194bc3a84901212f42'
@@ -158,16 +154,16 @@ SOCIAL_AUTH_FACEBOOK_SECRET = 'a0ae6ffd781f7d194bc3a84901212f42'
 import dj_database_url
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'] = dj_database_url.config(default='postgres://...')
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': '',
+#         'HOST': '',
+#         'PORT': '',
+#     }
+# }
 db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASES['default'].update(db_from_env)
 
