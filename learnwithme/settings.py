@@ -36,8 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
     'app',
-    'social_django'
+    
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -50,6 +51,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'learnwithme.urls'
@@ -141,8 +144,9 @@ AUTHENTICATION_BACKENDS = (
 
 )
 
-LOGIN_URL = '/login'
-LOGIN_REDIRECT_URL = '//'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'home'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '859046977191-avav307psof3ht1l9em9sqhh4gis6k6c.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'iFtgjw7xB88To7dPJP5ukfd3'

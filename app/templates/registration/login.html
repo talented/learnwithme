@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 
 {% block page %}
-<meta name="google-signin-client_id" content="859046977191-avav307psof3ht1l9em9sqhh4gis6k6c.apps.googleusercontent.com">
 
 <h2>Login</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login</button>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
 </form>
 <br>
 <p><strong>-- OR --</strong></p>
 <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+<a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
 {% endblock %}
