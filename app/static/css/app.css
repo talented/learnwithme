@@ -8,13 +8,12 @@ body {
 
 #category {
   padding: 5px 15px;
-  height: 30px;
-  max-resolution: 20px;
+  height: 25px;
 }
 
 #mainpage {
   background-color: #f7f7f7;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 #footer {
